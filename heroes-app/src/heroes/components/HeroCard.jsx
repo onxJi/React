@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const HeroCard = ({ hero }) => {
   return (
     <div className="card ms-3" style={{ maxWidth: 540 }}>
@@ -19,6 +21,7 @@ export const HeroCard = ({ hero }) => {
             <p className="card-text">
               <small className="text-muted">{hero.first_appearance}</small>
             </p>
+            <Link to={`/hero/${hero.id}`}>Más...</Link>
           </div>
         </div>
       </div>
