@@ -1,12 +1,19 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export const HeroCard = ({ hero }) => {
+  // prop validation
+  HeroCard.propTypes = {
+    hero: PropTypes.object.isRequired,
+  };
+
+  // rest of the component code
   return (
     <div className="card ms-3" style={{ maxWidth: 540 }}>
       <div className="row no-gutters">
         <div className="col-md-4">
           <img
-            src={`./assets/heroes/${hero.id}.jpg`}
+            src={`/heroes/${hero.id}.jpg`}
             className="card-img"
             alt={hero.superhero}
           />
